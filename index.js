@@ -8,11 +8,11 @@ const Classes = getByProps('godlike', 'container');
 
 export default class DataSaver extends Plugin {
    async start() {
-      this.interval = setInterval(this.save, 18e5);
+      this.interval = setInterval(() => this.save(), 18e5);
 
       try {
          await waitFor(`.${Classes.container}`);
-         await this.save();
+         this.save();
       } catch (e) {
          this.logger.error('Failed to save data on cold start, container class not found.', e);
       }
@@ -22,7 +22,7 @@ export default class DataSaver extends Plugin {
       clearInterval(this.interval);
    }
 
-   async save() {
+   save() {
       const user = Users.getCurrentUser();
       if (!user) return;
 
