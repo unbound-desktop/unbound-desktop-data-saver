@@ -1,0 +1,12 @@
+{
+   "name": "Data Saver",
+   "authors": [
+      {
+         "name": "eternal",
+         "id": "263689920210534400"
+      }
+   ],
+   "description": "Saves friends & servers every 30 minutes to unbound's settings folder.",
+   "version": "1.0.0",
+   "id": "eternal.data-saver"
+}
