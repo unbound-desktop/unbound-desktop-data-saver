@@ -1,6 +1,6 @@
 import Plugin from '@structures/plugin';
 
-import { Users, Guilds, Relationships } from '@webpack/common';
+import { Users, Guilds, Relationships } from '@webpack/stores';
 import { getByProps } from '@webpack';
 import { waitFor } from '@utilities';
 
